@@ -51,7 +51,7 @@ public class QueueArray_2511532017 {
 			System.out.println("\nAntrian Kosong\n");
 			return;
 		}
-		for (i=front_2017; i<rear_2017; i++) {
+		for (i=front_2017; i<=rear_2017; i++) {
 			System.out.printf(" %d <--", array_2017[i]);
 		}
 		return;
