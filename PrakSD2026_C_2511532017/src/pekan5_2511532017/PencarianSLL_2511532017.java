@@ -26,7 +26,7 @@ public class PencarianSLL_2511532017 {
 		traversal (head_2017);
 		//data yang akan dicari
 		int key_2017 = 30;
-		System.out.print("cari data "+ key_2017 + "= ");
+		System.out.print("cari data "+ key_2017 + " = ");
 		if (searchKey(head_2017, key_2017))
 			System.out.print("ketemu");
 		else

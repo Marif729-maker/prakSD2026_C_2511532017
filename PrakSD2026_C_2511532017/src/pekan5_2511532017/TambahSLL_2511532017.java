@@ -18,7 +18,7 @@ public class TambahSLL_2511532017 {
 		NodeSLL_2511532017 last_2017 = head_2017;
 		//telusuri ke node akhir
 		while (last_2017.next_2017 != null) {
-			last_2017 = last_2017.next_2017;
+			last_2017 = last_2017.next_2017; 
 		}
 		//ubah pointer
 		last_2017.next_2017 = newNode_2017;

@@ -21,7 +21,7 @@ public class HapusSLL_2511532017 {
 		}
 		//temukan node terakhir ke dua
 		NodeSLL_2511532017 secondLast = head_2017;
-		while (secondLast.next_2017 != null) {
+		while (secondLast.next_2017.next_2017 != null) {
 			secondLast = secondLast.next_2017;
 		}
 		//hapus node terakhir
@@ -83,19 +83,24 @@ public class HapusSLL_2511532017 {
 			head_2017.next_2017.next_2017.next_2017.next_2017.next_2017 = new NodeSLL_2511532017(6);
 			
 			// print early list
-			System.out.println("list awal : ");
+			System.out.print("list awal : ");
 			printList_2017(head_2017);
 			
 			// delete head
 			head_2017 = deleteHead_2017(head_2017);
-			System.out.println("List setelah simpul terakhir di hapus : ");
+			System.out.print("List setelah simpul head di hapus : ");
+			printList_2017(head_2017);
+			
+			//hapus node terakhir
+			head_2017= removeLastNode (head_2017);
+			System.out.print("List setelah simpul terakhir di hapus : ");
 			printList_2017(head_2017);
 			
 			// deleteing node at pos[2]
 			int pos2_2017 = 2;
 			head_2017 = deleteNode_2017(head_2017, pos2_2017);
 			// print list after deletion
-			System.out.println("List setelah posisi 2 dihapus : ");
+			System.out.print("List setelah posisi 2 dihapus : ");
 			printList_2017(head_2017);
 		}
 
