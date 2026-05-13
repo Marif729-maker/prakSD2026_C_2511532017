@@ -12,16 +12,6 @@ public class Musik_2511532017 {
         System.out.println("6. Keluar");
     }
     
-    // Helper method untuk mencari node terakhir (tail) dari head
-    // Dibutuhkan karena backwardTraversal membutuhkan parameter tail
-    public static Lagu_2511532017 findTail_2017(Lagu_2511532017 head_2017) {
-        if (head_2017 == null) return null;
-        Lagu_2511532017 curr_2017 = head_2017;
-        while (curr_2017.getNext_2017() != null) {
-            curr_2017 = curr_2017.getNext_2017();
-        }
-        return curr_2017;
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -74,7 +64,7 @@ public class Musik_2511532017 {
                         System.out.println("Playlist masih kosong.");
                     } else {
                         // Cari tail terlebih dahulu untuk traversing mundur
-                        Lagu_2511532017 tail_2017 = findTail_2017(head_2017);
+                        Lagu_2511532017 tail_2017 =Lagu_2511532017.findTail_2017(head_2017);
                         Lagu_2511532017.backwardTraversal_2017(tail_2017);
                     }
                     break;
