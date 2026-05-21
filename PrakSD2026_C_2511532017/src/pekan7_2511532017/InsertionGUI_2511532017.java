@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 public class InsertionGUI_2511532017 extends JFrame {
@@ -42,7 +43,7 @@ public class InsertionGUI_2511532017 extends JFrame {
 		setSize(750, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
-		setLayout (new BorderLayout());
+		getContentPane().setLayout (new BorderLayout());
 		
 		//panel input
 		JPanel inputPanel_2017 = new JPanel (new FlowLayout());
@@ -72,10 +73,10 @@ public class InsertionGUI_2511532017 extends JFrame {
 		JScrollPane scrollPane_2017 = new JScrollPane (stepArea_2017);
 		
 		//tambahkan panel ke frame
-		add(inputPanel_2017, BorderLayout.NORTH);
-		add(panelArray_2017, BorderLayout.CENTER);
-		add(controlPanel_2017, BorderLayout.SOUTH);
-		add(scrollPane_2017, BorderLayout.EAST);
+		getContentPane().add(inputPanel_2017, BorderLayout.NORTH);
+		getContentPane().add(panelArray_2017, BorderLayout.WEST);
+		getContentPane().add(controlPanel_2017, BorderLayout.SOUTH);
+		getContentPane().add(scrollPane_2017, BorderLayout.EAST);
 		
 		//event set array
 		setButton_2017.addActionListener(e -> setArrayFromInput_2017());
@@ -177,16 +178,22 @@ public class InsertionGUI_2511532017 extends JFrame {
 		
 	}
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					InsertionGUI_2511532017 frame = new InsertionGUI_2511532017();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+		SwingUtilities.invokeLater(()-> {
+			InsertionGUI_2511532017 gui_2017 = new InsertionGUI_2511532017();
+			gui_2017.setVisible (true);
 		});
 	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					InsertionGUI_2511532017 frame = new InsertionGUI_2511532017();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 }
