@@ -247,7 +247,7 @@ public class BubbleSortGUI_2511532017 extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new BubbleSortGUI_2511532017().setVisible(true);
+                new Sorting_2511532017().setVisible(true);
             }
         });
     }

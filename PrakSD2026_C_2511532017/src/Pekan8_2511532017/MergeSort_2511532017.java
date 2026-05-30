@@ -1,10 +1,10 @@
 package Pekan8_2511532017;
 
 public class MergeSort_2511532017 {
-	void merge_2017 (int arr_2017[], int l_2017, int m_2017, int r_2027) {
+	void merge_2017 (int arr_2017[], int l_2017, int m_2017, int r_2017) {
 		//find size of two subarray to be merged
 		int n1_2017 = m_2017 - l_2017 + 1;
-		int n2_2017 = r_2027 - m_2017;
+		int n2_2017 = r_2017 - m_2017;
 		//create temp array
 		int L[] = new int[n1_2017];
 		int R[] = new int[n2_2017];
